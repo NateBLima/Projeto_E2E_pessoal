@@ -1,0 +1,23 @@
+{
+  "name": "projeto_e2e_pessoal",
+  "version": "1.0.0",
+  "description": "Projeto pessoal para práticar automação de testes usando Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NateBLima/Projeto_E2E_pessoal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NateBLima/Projeto_E2E_pessoal/issues"
+  },
+  "homepage": "https://github.com/NateBLima/Projeto_E2E_pessoal#readme",
+  "devDependencies": {
+    "cypress": "^14.4.0"
+  }
+}
