@@ -1,6 +1,6 @@
 class CarrinhoPage {
   acessarCarrinho() {
-    cy.get('.woocommerce-message a').contains('Ver carrinho').click();
+    cy.contains('Ver carrinho').should('be.visible').click();
   }
 
   validarProdutoNoCarrinho(nomeProduto) {

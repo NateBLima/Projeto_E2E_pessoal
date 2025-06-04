@@ -9,7 +9,7 @@ class LoginPage {
   }
 
   submeterLogin() {
-    cy.get('button[name="login"]').click();
+    cy.get('.woocommerce-form > .button').click();
   }
 
   validarLoginSucesso() {

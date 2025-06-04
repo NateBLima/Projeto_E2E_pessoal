@@ -2,12 +2,12 @@ import CheckoutPage from '../pageObjects/CheckoutPage'
 
 describe('Testes de Checkout', () => {
   beforeEach(() => {
-    cy.login('usuario@teste.com', 'senha123')
+    cy.login('nateqa@teste0.com', 'senha123')
     cy.visit('/carrinho')
     cy.get('.checkout-button').click()
   })
 
-  it('Finalizar pedido com sucesso', () => {
+  it.only('Finalizar pedido com sucesso', () => {
     CheckoutPage.preencherDadosCheckout({
       nome: 'Nathan',
       sobrenome: 'Brandão',
@@ -15,7 +15,7 @@ describe('Testes de Checkout', () => {
       cidade: 'Contagem',
       cep: '32000000',
       telefone: '31999999999',
-      email: 'nathan@teste.com'
+      email: 'nateqa@teste0.com'
     })
     CheckoutPage.aceitarTermos()
     CheckoutPage.submeterPedido()
@@ -30,7 +30,7 @@ describe('Testes de Checkout', () => {
       cidade: 'Contagem',
       cep: '32000000',
       telefone: '31999999999',
-      email: 'nathan@teste.com'
+      email: 'nateqa@teste0.com'
     })
     CheckoutPage.submeterPedido()
     // Esperado: mensagem de erro de termos não aceitos

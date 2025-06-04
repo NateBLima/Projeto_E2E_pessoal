@@ -6,14 +6,16 @@ describe('Testes de Cadastro', () => {
   })
 
   it('Cadastro com sucesso', () => {
-    const email = `usuario${Date.now()}@teste.com`
-    CadastroPage.preencherCadastro('Usuário Teste', email, 'senha123')
+    let email = "nateqa@teste0.com"
+    let senha = "senha123"
+    CadastroPage.preencherCadastro(email, senha)
     CadastroPage.submeterCadastro()
     CadastroPage.validarCadastroSucesso()
   })
 
   it('Cadastro com email já existente', () => {
-    CadastroPage.preencherCadastro('Usuário Teste', 'usuario@teste.com', 'senha123')
+    let email = "nateqa@teste0.com"
+    CadastroPage.preencherCadastro(email, 'senha123')
     CadastroPage.submeterCadastro()
     CadastroPage.validarMensagemErro()
   })
