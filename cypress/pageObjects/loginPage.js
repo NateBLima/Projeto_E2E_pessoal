@@ -1,24 +1,24 @@
 class LoginPage {
   acessarPaginaDeLogin() {
-    cy.visit('/minha-conta')
+    cy.visit('/minha-conta');
   }
 
   preencherLogin(email, senha) {
-    cy.get('#username').type(email)
-    cy.get('#password').type(senha)
+    cy.get('#username').type(email);
+    cy.get('#password').type(senha);
   }
 
   submeterLogin() {
-    cy.get('.woocommerce-form > .button').click()
+    cy.get('button[name="login"]').click();
   }
 
   validarLoginSucesso() {
-    cy.get('.woocommerce-MyAccount-content').should('contain', 'Olá')
+    cy.contains('Olá').should('exist');
   }
 
   validarMensagemErro() {
-    cy.get('.woocommerce-error').should('be.visible')
+    cy.get('.woocommerce-error').should('be.visible');
   }
 }
 
-export default new LoginPage()
+export default new LoginPage();

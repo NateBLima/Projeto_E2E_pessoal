@@ -1,27 +1,27 @@
 class ProdutoPage {
   selecionarProduto(nomeProduto) {
-    cy.contains(nomeProduto).click()
+    cy.contains(nomeProduto).click();
   }
 
   selecionarTamanho(tamanho) {
-    cy.get('.button-variable-item-' + tamanho).click()
+    cy.get('.button-variable-item-' + tamanho).click();
   }
 
   selecionarCor(cor) {
-    cy.get('.button-variable-item-' + cor).click()
+    cy.get('.button-variable-item-' + cor).click();
   }
 
-  definirQuantidade(qtd) {
-    cy.get('.input-text.qty').clear().type(qtd)
+  definirQuantidade(quantidade) {
+    cy.get('.input-text.qty').clear().type(quantidade);
   }
 
   adicionarAoCarrinho() {
-    cy.get('.single_add_to_cart_button').click()
+    cy.get('.single_add_to_cart_button').click();
   }
 
   validarAdicaoAoCarrinho() {
-    cy.get('.woocommerce-message').should('contain', 'foi adicionado no seu carrinho')
+    cy.get('.woocommerce-message').should('contain', 'foi adicionado no seu carrinho');
   }
 }
 
-export default new ProdutoPage()
+export default new ProdutoPage();

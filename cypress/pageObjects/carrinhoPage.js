@@ -1,15 +1,15 @@
 class CarrinhoPage {
   acessarCarrinho() {
-    cy.get('.woocommerce-message a').contains('Ver carrinho').click()
+    cy.get('.woocommerce-message a').contains('Ver carrinho').click();
   }
 
-  validarProdutoNoCarrinho(produto) {
-    cy.get('.product-name').should('contain', produto)
+  validarProdutoNoCarrinho(nomeProduto) {
+    cy.get('.cart_item').should('contain', nomeProduto);
   }
 
   finalizarCompra() {
-    cy.get('.checkout-button').click()
+    cy.get('.checkout-button').click();
   }
 }
 
-export default new CarrinhoPage()
+export default new CarrinhoPage();
