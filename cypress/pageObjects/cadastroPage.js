@@ -9,7 +9,7 @@ class CadastroPage {
   }
 
   submeterCadastro() {
-    cy.get('button[name="register"]').click();
+   cy.get(':nth-child(4) > .button').click();
   }
 
   validarCadastroSucesso() {
