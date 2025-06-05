@@ -5,7 +5,7 @@ describe('Testes de Login', () => {
     LoginPage.acessarPaginaDeLogin()
   })
 
-  it.only('Login com sucesso', () => {
+  it('Login com sucesso', () => {
     let email = "nateqa@teste0.com"
     let senha = "senha123"
     LoginPage.preencherLogin(email, senha)

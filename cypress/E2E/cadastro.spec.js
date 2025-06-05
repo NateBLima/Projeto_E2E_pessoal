@@ -6,8 +6,8 @@ describe('Testes de Cadastro', () => {
   })
 
   it('Cadastro com sucesso', () => {
-    let email = "nateqa@teste0.com"
-    let senha = "senha123"
+    let email = "natexpto@teste0.com"
+    let senha = "senha1234"
     CadastroPage.preencherCadastro(email, senha)
     CadastroPage.submeterCadastro()
     CadastroPage.validarCadastroSucesso()
